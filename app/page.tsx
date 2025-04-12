@@ -3,8 +3,11 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import Link from "next/link"
 import { ArrowRight, FileText, PenToolIcon as Tool, DollarSign, ChevronRight } from "lucide-react"
 import Image from "next/image"
+import supabase from "../supabaseClient.js"
 
 export default function HomePage() {
+  console.log(supabase)
+
   return (
     <div>
       {/* Hero Section */}
