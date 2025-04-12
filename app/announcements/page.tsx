@@ -1,4 +1,4 @@
-import { createClient } from "@/lib/supabase/server"
+import createClient from "@/lib/supabase/server"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Calendar } from "lucide-react"
@@ -6,7 +6,7 @@ import { Calendar } from "lucide-react"
 export const revalidate = 60 // Revalidate this page every 60 seconds
 
 export default async function AnnouncementsPage() {
-  const supabase = createClient()
+  const supabase = await createClient()
 
   // Fetch announcements from the database
   const { data: announcements, error } = await supabase
